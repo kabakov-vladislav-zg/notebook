@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Document</title>
+
+  <script src="main.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Roboto:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+
+</head>
+<body class="body">
+
+  <div class="preloader" style="position: fixed; z-index: 999; width: 100vw; height:100vh; height: calc(var(--vh, 1vh) * 100); background-color: red; top: 0; left: 0;">
+  </div>
+
+  <div class="pop-up">
+  	<div class="pop-up__content">
+  		<div class="button-symbol pop-up__button-symbol">
+  			<div class="button-symbol__content">
+  				<button class="button-symbol__button" id="buttonEscPopUp"><span>&#10006;</span></button>
+  				<label class="button-symbol__label" for="buttonEscPopUp">закрыть справку</label>
+  			</div>
+	  	</div>
+	  	в разработке...
+	  	<h2>
+	  		Что это?
+	  	</h2>
+	  	<p>
+	  		Он-лайн блокнот, хранящий ваши заметке в браузере
+	  	</p>
+	  	<h2>
+	  		Как использовать?
+	  	</h2>
+	  	<p>
+	  		<ul> 
+	  			<li> 
+	  				Горячие клавиши для сохранения заметки: <kbd class="hotkeys">Ctrl</kbd>+<kbd class="hotkeys">Enter</kbd>
+	  			</li>
+	  			<li> 
+	  				Для сортировки заметок используйте хэштеги: введите символ #, а сразу за ним — текст (пример: #работа). Хэштеги отображаются в шапке заметки и боковой панеле.
+	  			</li>
+	  		</ul>
+	  	</p>
+	  	<h2>
+	  		Кто автор?
+	  	</h2>
+	  	<address>
+	  		<ul> 
+	  			<li> 
+	  				<a href="https://github.com/zloyGololed">гитхаб</a>
+	  			</li>
+	  			<li> 
+	  				<a href="https://vk.com/zloy_gololed">вконтакте</a>
+	  			</li>
+	  			<li> 
+	  				<a href="https://zloy.gololed@gmail.com">почта</a>
+	  			</li>
+	  		</ul>
+	  	</address>
+  	</div>
+  </div>
+
+  <header class="header">
+  	<div class="header__content">
+	    <h1 class="logo">
+	      <span class="logo__color_orange">В</span><span class="logo__color_white">-блокнот!</span>
+	    </h1>
+	    <div class="button-symbol header__button-symbol">
+	    	<div class="button-symbol__content">
+	    		<label class="button-symbol__label" for="buttonMenu">
+	    			открыть меню
+	    		</label>
+	    		<button class="button-symbol__button" id="buttonMenu"><span>&#9776;</span></button>
+	    	</div>
+	  	</div>
+	</div>
+  </header>
+
+  <aside class="side-bar">
+  	<div class="side-bar__content">
+	  	<div class="side-bar__menu">
+	  		<button class="botton-text" id="buttonDescription">
+	  			<span class="blink blink_red"><span></span></span>
+        		<span class="blink blink_blue"><span></span></span>
+        		<span class="side-bar__text side-bar__botton-text"><span>справка</span><span class="cursor"><span>&#9650;</span></span></span>
+	  		</button>
+	  		<div class="button-symbol side-bar__button-symbol">
+	  			<div class="button-symbol__content">
+	  				<label class="button-symbol__label" for="buttonEscape">закрыть меню</label>
+			  		<button class="button-symbol__button" id="buttonEscape"><span>&#10006;</span></button>
+	  			</div>
+		  	</div>
+	  	</div>
+	    <hr class="side-bar__hr">
+	    <div class="side-bar__tag-list"> 
+	    	<span class="side-bar__text">хэштеги:</span>
+		    <ul class="tag-list" id="tagList"></ul>
+	    </div>
+	</div>
+  </aside>
+
+  <main class="main">
+    <div class="form-add-note" id="formInputNote">
+      <textarea class="form-add-note__text-fild" id="areaInputNote" autofocus>
+      </textarea>
+      <div class="form-add-note__menu">
+        <button class="button botton_dark" id="buttonInputNote">
+        	<span class="blink blink_red"><span></span></span>
+        	<span class="blink blink_blue"><span></span></span>
+        	<span class="logo__color_orange">В</span><span class="logo__color_white">-блокнот!</span>
+        	</span>
+        </button>
+      </div>
+      <section class="notes notes_marked" id="sectionSearchResults">
+      	
+      </section>
+      <section class="notes" id="sectionNoteStorage">
+      	
+      </section>
+    </div>
+  </main>
+    
+</body>
+</html>
