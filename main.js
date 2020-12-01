@@ -371,14 +371,12 @@ function ready(){
 			header.classList.add('slide-side-bar__content_off');
 			popUp.classList.add('slide-pop-up_on');
 
-			setTimeout(returnInitial, 500);
-
-			function returnInitial() {
+			setTimeout(() => {
 				sideBar.className = 'side-bar__content side-bar_off';
 				header.className = 'header__content header_off';
 				popUp.className = 'pop-up pop-up_on';
-			}
-		} else return;
+			}, 500);
+		};
 	}
 	
 	function offPopUp() {
@@ -392,14 +390,12 @@ function ready(){
 			header.classList.add('slide-side-bar__content_on');
 			popUp.classList.add('slide-pop-up_off');
 
-			setTimeout(returnInitial, 500);
-
-			function returnInitial() {
+			setTimeout(() => {
 				sideBar.className = 'side-bar__content';
 				header.className = 'header__content';
-				popUp.className = 'pop-up';
-			}		
-		} else return;
+				popUp.className = 'pop-up';		
+			}, 500);		
+		};
 	}
 
 	function onSideBar() {
@@ -410,12 +406,10 @@ function ready(){
 		if (!sideBar.classList.contains('slide-side-bar_on')){
 			sideBar.classList.add('slide-side-bar_on');
 
-			setTimeout(returnInitial, 250);
-
-			function returnInitial() {
+			setTimeout(() => {
 				sideBar.className = 'side-bar side-bar_on';
-			}
-		} else return;
+			}, 250);
+		};
 	}
 
 	function offSideBar() {
@@ -425,12 +419,10 @@ function ready(){
 			sideBar.classList.contains('side-bar_on')){
 			sideBar.classList.add('slide-side-bar_off');
 
-			setTimeout(returnInitial, 250);
-
-			function returnInitial() {
+			setTimeout(() => {
 				sideBar.className = 'side-bar';
-			}		
-		} else return;
+			}, 250);	
+		};
 	}
 
 	function addHoverAnimation(targetElem) {
